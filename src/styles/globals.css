@@ -1,0 +1,239 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.area_container {
+  container-type: size;
+  height: 100%;
+}
+
+@container (orientation: portrait) {
+  .area {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
+  .area_poster{
+    height:60vh;
+  }
+  .area_poster > img{
+    height:100%;
+    border-radius:0.5vw;
+  }
+  .area_content{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+  }
+  .area_content__title{
+    width:100%;
+    font-size:3.4vh;
+    margin:1vh 0 0.8vh 0;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .area_content__genre{
+    width:100%;
+    display:flex;
+    font-size:1.5vh;
+    gap:2vh;
+    opacity: .6;
+
+  }
+  .area_content__genre li{
+    padding:0.1vh 0.5vh;
+    border-radius:0.2vh;
+    background:rgba(255,255,255,0.1);
+  }
+  .area_content__info{
+    display:flex;
+    margin-top:2vh;
+    gap:2vh;
+    align-items:center;
+  }
+  .area_content__info time{
+    font-size:2vh;
+    opacity: .6;
+  }
+  .area_content__info figure{
+    display:flex;
+    gap:1vh;
+  }
+  .area_content__info figure img{
+    height:2vh;
+  }
+  .area_content_seances{
+    margin-top: 2vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .area_content_seances__title{
+    font-size:2vh;
+    margin-bottom: 2vh;
+  }
+  .area_content_seances__seances{
+    width:100%;
+    display:flex;
+    gap:1vh;
+  }
+  .area_content__info span{
+    background:#fff;
+    padding:0.1vh 0.5vh;
+    border-radius:0.2vh;
+    color:#000;
+    font-size:2vh;
+    font-weight:bold;
+  }
+  .area_content_seances__seances div{
+    display:flex;
+    flex-direction:column;
+    background:#f8e71c;
+    border-radius:0.3vh;
+  }
+  .area_content_seances__seances div strong{
+    font-size:2.5vh;
+    color:#000;
+    widtH:100%;
+    padding:0 1vh;
+    border-radius:0.3vh;
+  }
+  .area_content_seances__seances div span{
+    font-size:1.2vh;
+    font-weight:bold;
+    color:#000;
+    widtH:100%;
+    padding:0.5vh 1vh;
+    background:rgba(0,0,0,0.1);
+    text-align:center;
+  }
+  .seans_gecti{
+    opacity: .3;
+  }
+}
+
+@container (orientation: landscape) {
+  .area {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding:2vw;
+  }
+  .area_poster{
+    max-width:30%;
+    min-width:30%;
+  }
+  .area_poster > img{
+    height:100%;
+    object-fit:contain;
+    border-radius:0.5vw;
+  }
+  .area_content{
+    width:70%;
+    display:flex;
+    flex-direction:column;
+    padding-left: 1vw;
+  }
+  .area_content__title{
+    width:100%;
+    margin:1vw 0 0.8vw 0;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:5vh;
+  }
+  .area_content__genre{
+    width:100%;
+    display:flex;
+    font-size:1vw;
+    gap:1vw;
+    opacity: .6;
+
+  }
+  .area_content__genre li{
+    padding:0.1vw 0.5vw;
+    border-radius:0.2vw;
+    background:rgba(255,255,255,0.1);
+  }
+  .area_content__info{
+    display:flex;
+    margin-top:2vw;
+    gap:1vw;
+    align-items:center;
+  }
+  .area_content__info time{
+    font-size:1vw;
+    opacity: .6;
+  }
+  .area_content__info figure{
+    display:flex;
+    gap:1vw;
+  }
+  .area_content__info figure img{
+    height:1vw;
+  }
+  .area_content_seances{
+    margin-top: 2vw;
+    display:flex;
+    flex-direction:column;
+  }
+  .area_content_seances__title{
+    font-size:1vw;
+    margin-bottom: 1vw;
+  }
+  .area_content_seances__seances{
+    width:100%;
+    display:flex;
+    gap:0.5vw;
+  }
+  .area_content__info span{
+    background:#fff;
+    padding:0.1vw 0.5vw;
+    border-radius:0.2vw;
+    color:#000;
+    font-size:1.3vw;
+    font-weight:bold;
+  }
+  .area_content_seances__seances div{
+    display:flex;
+    flex-direction:column;
+    background:#f8e71c;
+    border-radius:0.3vw;
+  }
+  .area_content_seances__seances div strong{
+    font-size:1vw;
+    color:#000;
+    widtH:100%;
+    padding:0 1vw;
+    border-radius:0.3vw;
+  }
+  .area_content_seances__seances div span{
+    font-size:0.5vw;
+    font-weight:bold;
+    color:#000;
+    widtH:100%;
+    padding:0.5vw 1vw;
+    background:rgba(0,0,0,0.1);
+    text-align:center;
+  }
+  .seans_gecti{
+    opacity: .3;
+  }
+}
